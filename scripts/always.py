@@ -27,7 +27,9 @@ Lancé à chaque frame durant tout le jeu.
 '''
 
 
+from time import sleep
 from bge import logic as gl
+from bge import events
 from scripts.labtools import labgetobject as get_obj
 
 
@@ -36,6 +38,9 @@ def main():
     game = get_obj.get_scene_with_name("Game")
     if game:
         game_obj = game.objects
+        keys()
+        set_ball_visible(game_obj)
+
 
         # Rotation du Logo
         rotation(game_obj, "Plane.001", 0.02)
@@ -59,7 +64,6 @@ def rotation(game_obj, blend_o, beta):
     rotation = [0, beta, 0]
     b_obj.applyRotation(rotation, 0)
 
-
 def scale(game_obj, blend_o, k):
     """Application d'un scale k sur l'objet"""
 
@@ -67,3 +71,20 @@ def scale(game_obj, blend_o, k):
     b_obj = game_obj[blend_o]
     scene = gl.getCurrentScene()
     b_obj.worldScale = (k, 0, k)
+
+def keys():
+
+    if gl.keyboard.events[events.VKEY] == gl.KX_INPUT_JUST_ACTIVATED:
+        # V pour visible, invisible de la balle
+        if gl.ball_visible == 0:
+            gl.ball_visible = 1
+        else:
+            gl.ball_visible = 0
+        sleep(0.1)
+
+def set_ball_visible(game_obj):
+    ball = game_obj["ball"]
+    if gl.ball_visible == 0:
+        ball.visible = 0
+    else:
+        ball.visible = 1

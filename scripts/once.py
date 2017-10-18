@@ -64,9 +64,10 @@ def get_conf():
     gl.ma_conf = MyConfig(current_dir + "scripts/bgb.ini")
     gl.conf = gl.ma_conf.conf
 
-    print("\nConfiguration du jeu bgb:")
+    print("\nConfiguration du jeu:")
     print(gl.conf, "\n")
 
 def set_variable():
     gl.k_plage = 1.1
     gl.k = 1.1
+    gl.ball_visible = 0
