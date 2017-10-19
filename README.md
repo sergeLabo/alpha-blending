@@ -32,3 +32,4 @@ Le logo est sur un cube défini comme une balle, et il est enfermé dans un autr
 
 #### Déformation d'un plan par une armature et des actions
 TODO
+c'est en cours

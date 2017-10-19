@@ -38,7 +38,7 @@ def main():
     game = get_obj.get_scene_with_name("Game")
     if game:
         game_obj = game.objects
-        keys()
+        keys(game_obj)
         set_ball_visible(game_obj)
 
 
@@ -72,7 +72,7 @@ def scale(game_obj, blend_o, k):
     scene = gl.getCurrentScene()
     b_obj.worldScale = (k, 0, k)
 
-def keys():
+def keys(game_obj):
 
     if gl.keyboard.events[events.VKEY] == gl.KX_INPUT_JUST_ACTIVATED:
         # V pour visible, invisible de la balle
@@ -81,6 +81,53 @@ def keys():
         else:
             gl.ball_visible = 0
         sleep(0.1)
+
+    if gl.keyboard.events[events.HKEY] == gl.KX_INPUT_JUST_ACTIVATED:
+        hide_all(game_obj)
+        sleep(0.1)
+
+    if gl.keyboard.events[events.PKEY] == gl.KX_INPUT_JUST_ACTIVATED:
+        coucher_action(game_obj)
+        sleep(0.1)
+
+    if gl.keyboard.events[events.MKEY] == gl.KX_INPUT_JUST_ACTIVATED:
+        reset_coucher_action(game_obj)
+        sleep(0.1)
+
+def hide_all(game_obj):
+    print(game_obj)
+    for o in game_obj:
+        o.visible = 0
+    game_obj["coucher"].visible = 1
+
+def reset_coucher_action(game_obj):
+
+    armature = game_obj["Armature"]
+    armature.playAction('ArmatureAction.001',
+                        25,
+                        0,
+                        speed=1,
+                        play_mode=0)
+
+def coucher_action(game_obj):
+    """Scale du soleil avec ArmatureAction
+    https://docs.blender.org/api/blender_python_api_2_69_1/bge.types.KX_GameObj\
+    ect.html?highlight=playaction#bge.types.KX_GameObject.playAction
+    own.playAction("Idle", 1, 61, blendin=5, speed=1, play_mode=1)
+    own is the armature
+    play_mode=1 is looping.
+    play_mode=0 is play once.
+    """
+
+    print("Couche toi là")
+    armature = game_obj["Armature"]
+    armature.playAction('ArmatureAction.001',
+                        0,
+                        25,
+                        blendin=5,
+                        speed=1,
+                        play_mode=0)
+
 
 def set_ball_visible(game_obj):
     ball = game_obj["ball"]
