@@ -33,3 +33,9 @@ Le logo est sur un cube défini comme une balle, et il est enfermé dans un autr
 #### Déformation d'un plan par une armature et des actions
 TODO
 c'est en cours
+pour les actions
+
+### Installation
+Il faut installer:
+* labtools
+https://wiki.labomedia.org/index.php/Cr%C3%A9er_son_propre_package_python

@@ -22,12 +22,13 @@ long_line_behaviour=1
 long_line_column=80
 
 [files]
-current_page=1
+current_page=3
 FILE_NAME_0=0;Conf;0;EUTF-8;0;1;0;%2Fmedia%2Fdata%2F3D%2Fprojets%2Falpha-blending%2Fscripts%2Falpha-blending.ini;0;4
 FILE_NAME_1=1161;Python;0;EUTF-8;0;1;0;%2Fmedia%2Fdata%2F3D%2Fprojets%2Falpha-blending%2Fscripts%2Flabomedia_always.py;0;4
 FILE_NAME_2=1098;Python;0;EUTF-8;0;1;0;%2Fmedia%2Fdata%2F3D%2Fprojets%2Falpha-blending%2Fscripts%2Flabomedia_once.py;0;4
-FILE_NAME_3=2171;Python;0;EUTF-8;0;1;0;%2Fmedia%2Fdata%2F3D%2Fprojets%2Falpha-blending%2Fscripts%2Fonce.py;0;4
-FILE_NAME_4=2437;Python;0;EUTF-8;0;1;0;%2Fmedia%2Fdata%2F3D%2Fprojets%2Falpha-blending%2Fscripts%2Falways.py;0;4
+FILE_NAME_3=2193;Markdown;0;EUTF-8;0;1;0;%2Fmedia%2Fdata%2F3D%2Fprojets%2Falpha-blending%2FREADME.md;0;4
+FILE_NAME_4=1386;Python;0;EUTF-8;0;1;0;%2Fmedia%2Fdata%2F3D%2Fprojets%2Falpha-blending%2Fscripts%2Fonce.py;0;4
+FILE_NAME_5=1113;Python;0;EUTF-8;0;1;0;%2Fmedia%2Fdata%2F3D%2Fprojets%2Falpha-blending%2Fscripts%2Falways.py;0;4
 
 [VTE]
 last_dir=/home/pierre

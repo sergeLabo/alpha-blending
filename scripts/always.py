@@ -30,7 +30,7 @@ Lancé à chaque frame durant tout le jeu.
 from time import sleep
 from bge import logic as gl
 from bge import events
-from scripts.labtools import labgetobject as get_obj
+from labtools import labgetobject as get_obj
 
 
 def main():
@@ -119,7 +119,6 @@ def coucher_action(game_obj):
     play_mode=0 is play once.
     """
 
-    print("Couche toi là")
     armature = game_obj["Armature"]
     armature.playAction('ArmatureAction.001',
                         0,
