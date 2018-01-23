@@ -39,3 +39,5 @@ pour les actions
 Il faut installer:
 * labtools
 https://wiki.labomedia.org/index.php/Cr%C3%A9er_son_propre_package_python
+
+### License
